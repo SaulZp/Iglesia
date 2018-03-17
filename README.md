@@ -1,4 +1,4 @@
-Restaurant
+Proyecto Iglesia
 ==========
 
-A template for Restaurant business
+Administracion de Proyectos
