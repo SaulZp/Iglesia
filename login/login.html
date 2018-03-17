@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="css/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script src="js/login.js"></script>
+			<div id="loginContainer">
+                <a href="#" id="loginButton"><span>Login</span><em></em></a>
+                <div style="clear:both"></div>
+                <div id="loginBox">                
+                    <form id="loginForm" action="validarUsuario.php" method="POST">
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="Usuario">Usuario</label>
+                                <input type="text" name="usuario" id="usuario" required />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" required/>
+                            </fieldset>
+                            <input type="submit" id="entrar" value="Entrar" />
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
