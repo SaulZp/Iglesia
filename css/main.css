@@ -32,10 +32,11 @@ p.desc-text{
     margin-bottom: -51px;
 }
 .right-text p{
-    text-align: left !important;
+    text-align: center; !important;
     border-bottom: 1px solid;
     padding: 10px 0;
 }
+
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;  
@@ -352,14 +353,28 @@ INTRO CONTAINER
     background-position: center;
     background-attachment: fixed;
 }
- .pricing.background_content{
-    background: url('../images/pricing.jpg') no-repeat center center; 
+ .domingo.background_content{
+    background: url('../images/domingoRamos.jpg') no-repeat center center; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+ .jueves.background_content{
+    background: url('../images/jueves.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+ .viernes.background_content{
+    background: url('../images/viernes.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .reservation.background_content{
-    background: url('../images/reservation-seat.jpg') no-repeat center center; 
+    background: url('../images/time.jpg') no-repeat center center; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
