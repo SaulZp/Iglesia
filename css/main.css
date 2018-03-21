@@ -32,11 +32,10 @@ p.desc-text{
     margin-bottom: -51px;
 }
 .right-text p{
-    text-align: center; !important;
+    text-align: left !important;
     border-bottom: 1px solid;
     padding: 10px 0;
 }
-
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;  
@@ -353,28 +352,51 @@ INTRO CONTAINER
     background-position: center;
     background-attachment: fixed;
 }
- .domingo.background_content{
-    background: url('../images/domingoRamos.jpg') no-repeat center center; 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
- .jueves.background_content{
-    background: url('../images/jueves.jpg') no-repeat center center; 
+
+.confesion.background_content{
+    background: url('../images/confesion.jpg') no-repeat center center; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
- .viernes.background_content{
-    background: url('../images/viernes.jpg') no-repeat center center; 
+.cursos.background_content{
+    background: url('../images/2.jpg') no-repeat center center; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
+.dispensarios.background_content{
+    background: url('../images/1.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.quince.background_content{
+    background: url('../images/quince.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.retiros.background_content{
+    background: url('../images/cursos.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+ .pricing.background_content{
+    background: url('../images/pricing.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 .reservation.background_content{
-    background: url('../images/time.jpg') no-repeat center center; 
+    background: url('../images/reservation-seat.jpg') no-repeat center center; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
