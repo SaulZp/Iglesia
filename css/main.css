@@ -1026,3 +1026,11 @@ MEDIA QUERIE DESKTOP
         border-top:0 none;
     }
 }
+
+.div-center {
+    margin: auto;
+    width: 60%;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
