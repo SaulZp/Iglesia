@@ -33,10 +33,6 @@ CREATE TABLE reservaciones(
 	id_usuario	INT NOT NULL,
 	id_evento INT NOT NULL,
 	fecha DATETIME,
-	nombrePrin1 varchar(50) NOT NULL,
-	nombrePrin2 varchar(50) NULL,
-	nombreSec1 varchar(50) NOT NULL,
-	nombreSec2 varchar(50) NULL,
 	FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario),
 	FOREIGN KEY(id_evento) REFERENCES evento(id_evento)
 );
