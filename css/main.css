@@ -383,6 +383,12 @@ INTRO CONTAINER
     background-position: center;
     background-attachment: fixed;
 }
+.guadalupe.background_content{
+    background: url('../images/Nguadalupe.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 /*========================
 DESCRIPTION BODY CONTENT
 =========================*/
@@ -1002,6 +1008,7 @@ MEDIA QUERIE DESKTOP
         border-top:0 none;
     }
 }
+<<<<<<< HEAD
 
 .div-center {
     margin: auto;
@@ -1010,3 +1017,5 @@ MEDIA QUERIE DESKTOP
     padding: 10px;
     border-bottom: 1px solid;
 }
+=======
+>>>>>>> master
