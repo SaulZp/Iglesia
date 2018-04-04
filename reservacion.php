@@ -1,9 +1,14 @@
+<?
+header ('Content-type: text/html; charset=utf-8');
+php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
     <head>
-        <meta charset="UTF-8">
+        
         <title>Comunidad Católica</title>
+        <meta name="tipo_contenido"  content="text/html;" http-equiv="content-type" charset="utf-8">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
@@ -30,7 +35,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Comunidad Católica</a>
+                           <a class="navbar-brand" href="index.html">Comunidad Católica</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,19 +46,19 @@
     SERVICIOS
   </a>
                                 <ul>
-                                    
-  
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="adoracion.html">ADORACION AL SANTISMO</a>
-    <a class="dropdown-item" href="bautismo.html">SACRAMENTO DEL BAUTISMO</a>
-    <a class="dropdown-item" href="matrimonio.html">SACRAMENTO DEL MATRIMONIO</a>
-    <a class="dropdown-item" href="velatorio.html">VELATORIO</a>
-    <a class="dropdown-item" href="pastoral.html">PASTORAL DE ENFERMOS</a>
-
-  </div>
-
-                                    
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                         <a class="dropdown-item" href="adoracion.html">ADORACION AL SANTISMO</a>
+                                        <a class="dropdown-item" href="bautismo.html">SACRAMENTO DEL BAUTISMO</a>
+                                        <a class="dropdown-item" href="matrimonio.html">SACRAMENTO DEL MATRIMONIO</a>
+                                        <a class="dropdown-item" href="velatorio.html">VELATORIO</a>
+                                        <a class="dropdown-item" href="pastoral.html">PASTORAL DE ENFERMOS</a>
+                                        
+                                        <a class="dropdown-item" href="confesiones.html">CONFESIONES</a>
+                                        <a class="dropdown-item" href="cursos.html">CURSOS BIBLICOS</a>
+                                        <a class="dropdown-item" href="quince.html">MISA DE XV A&Ntilde;OS</a>
+                                        <a class="dropdown-item" href="retiros.html">RETIROS VOCACIONALES</a>
+                                        <a class="dropdown-item" href="dispensarios.html">DISPENSARIOS</a>
+                                    </div>
                                 </ul>
                             </li>
 
@@ -100,49 +105,57 @@
         </nav>
          
         
+        <!-- ============ Featured Dish  ============= -->
 
-
-
-  
-        <!-- ============ Horarios  ============= -->
-
-        <section  id="reservation"  class="description_content">
-            <div class="featured background_content">
-                <h1>HORARIOS</h1>
+        <section id="reservacion" class="description_content">
+            <div  class="reservacion background_content">
+                <h1>Haga su reservación</h1>
             </div>
             <div class="text-content container"> 
+                <div class="col-md-6">
+                    <?php
+                        $link=mysqli_connect("localhost","root","");
+                        mysqli_select_db($link,"iglesia");
+                    ?>
+                <div class="form">
+                    <FORM ACTION="reservacion.php" METHOD="POST">
+                        <select name="evento" class="input-group-sm">
+                            <?php
+                                $result=mysqli_query($link,"SELECT *FROM evento");
+                                while ($row = mysqli_fetch_array($result)) {
+                                    $nombre = utf8_encode($row['nombreEvento']);
+                                    $id = $row['id_evento'];
+                            ?>      
+                                <option value=<?php echo "$id" ?>><?php echo"$nombre" ?></option>
+                            <?php
+                                }
+                            ?>
+                            <option ></option>
+                        </select>
+                        <input  type="submit" name="enviar">
+                    </FORM>
+                </div>
+                    <form class="form" action="reservacion.php" method="POST" >
+                        <?php
+                        
+                            $evento = $_REQUEST['evento'];
+                            echo "$evento";    
+                        
+                        
+                        if (isset($_REQUEST['enviar'])) {
+                            if ($_POST['enviar']) {
+                                
+                            }
+                        }
+                        ?>
+                    </form>
+                    
+                </div>
                 
-                            <!-- Left Inputs -->
-                            <div class="container">
-                                <div class="div-center">
-                               
-                                        <!-- Message -->
-                                            <div class="right-text">
-                                            <h2 style="text-align: center;">MISAS</h2><hr>
-                                                <p>Lunes: 7:00, 10:00, 15:00, 19:00 </p>
-                                                <p>Martes: 7:00, 10:00, 15:00, 19:00</p>
-                                                <p>Miercoles: 7:00, 10:00, 15:00, 19:00</p>
-                                                <p>Jueves: 7:00, 10:00, 15:00, 19:00</p>
-                                                <p>Viernes: 7:00, 10:00, 15:00, 19:00</p>
-                                                <p>Sabados: 7:00, 10:00, 16:00, 18:00</p>
-                                                <p>Domingos: 7:00, 10:00, 13:00, 18:00</p>
-                                            </div>
-                                            <div class="right-text">
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            <h2 style="text-align: center;">SECRETARIA DE LA PARROQUIA</h2><hr>
-                                                <p>Lunes a Viernes: 9:00 - 17:00</p>
-                                                <p>Sabados: 9:00 - 17:00</p>
-                                                <p>Domingos: NO HAY SERVICIO</p>
-                                            </div>
-                                  
-                                </div>
-                            </div>
-                            <!-- Clear -->
-                            <div class="clear"></div>
             </div>
         </section>
+        <br><br><br><br>
+
         
 
         <!-- ============ Sección Pie de Página ============= -->
