@@ -1,11 +1,16 @@
 <?php 
 	session_start();
 	//CONEXION A BASE DE DATOS
-	$conexion = @mysql_connect('localhost','root','')or die('No se pudo conectar'.mysql_error());
+	$conexion = new mysqli('localhost', 'root', '', 'iglesia');
 	
-	//SELECCION DE BASE DE DATOS.
-	mysql_select_db("iglesia",$conexion) or die ('No se pudo conectar'.mysql_error());
-
+	//VERIFICACION DE CONEXION
+	/*if ($conexion->connect_errno) {
+		echo 'NO SE HA PODIDO CONECTAR LA BASE DE DATOS';
+		}else{
+			echo 'SE HA CONECTADO LA BASE DE DATOS';
+		}
+	*/
+	
 	
 	//Notificar todos los errores menos los Notice para los formularios
 	error_reporting(E_ALL ^ E_NOTICE);
@@ -18,15 +23,21 @@
 	$direccion = $_POST['direccion'];
 	$telefono = $_POST['telefono'];
 
-	//CONSULTA
-	$consulta = "SELECT * FROM usuarios where username = '$usuario'";
-	$resultado = mysql_query($consulta);
+	//CIFRADO DE PASSWORD
+	$cifradoPassword = md5($password);
 
+	//CONSULTA
+	$consulta = "SELECT * FROM usuarios where username = '$usuario' OR direccion='$direccion'";
+	$resultado = $conexion->query($consulta);
+	if(!$resultado){
+		echo 'Hemos experimentado un fallo en la consulta';
+	}
+	
 	//COMPROBACION DE USERNAME EXISTENTE
-	if(mysql_num_rows($resultado)==0){
+	if($resultado->num_rows ==0){
 		//SI NO EXISTE INTRODUCE EL NUEVO USUARIO EN LA BASE DE DATOS E INICIA SU SESION
-		$solicitud = "INSERT INTO usuarios (nombre,username,correo,password,direccion,telefono) VALUES('$nombre','$usuario','$correo','$password','$direccion',$telefono)";
-		mysql_query($solicitud);
+		$solicitud = "INSERT INTO usuarios (nombre,username,correo,password,direccion,telefono) VALUES('$nombre','$usuario','$correo','$cifradoPassword','$direccion',$telefono)";
+		$conexion->query($solicitud);
 
 		//VARIABLE PARA INICIAR SESION 
 		$_SESSION["username"] = $usuario;
@@ -36,7 +47,7 @@
 	}
 	else{
 		echo '<script>alert("El usuario ya existe, intente con otro nuevamente");</script>';
-		echo '<script>window.location="registro.html";</script>';
+		echo '<script>window.location="registro.php";</script>';
 	}
 
  ?>
