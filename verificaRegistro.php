@@ -27,7 +27,7 @@
 	$cifradoPassword = md5($password);
 
 	//CONSULTA
-	$consulta = "SELECT * FROM usuarios where username = '$usuario' OR direccion='$direccion'";
+	$consulta = "SELECT * FROM usuario where username = '$usuario' OR direccion='$direccion'";
 	$resultado = $conexion->query($consulta);
 	if(!$resultado){
 		echo 'Hemos experimentado un fallo en la consulta';
@@ -36,9 +36,16 @@
 	//COMPROBACION DE USERNAME EXISTENTE
 	if($resultado->num_rows ==0){
 		//SI NO EXISTE INTRODUCE EL NUEVO USUARIO EN LA BASE DE DATOS E INICIA SU SESION
-		$solicitud = "INSERT INTO usuarios (nombre,username,correo,password,direccion,telefono) VALUES('$nombre','$usuario','$correo','$cifradoPassword','$direccion',$telefono)";
+		$solicitud = "INSERT INTO usuario (nombre,username,correo,password,direccion,telefono) VALUES('$nombre','$usuario','$correo','$cifradoPassword','$direccion',$telefono)";
 		$conexion->query($solicitud);
-
+		
+		echo "$nombre $username $correo $cifradoPassword $direccion $telefono";
+		if (mysqli_query($conexion,$solicitud)){
+			echo "registro correcto";
+		}else
+		{
+			echo "Fallo al registrar";
+		}
 		//VARIABLE PARA INICIAR SESION 
 		$_SESSION["username"] = $usuario;
 

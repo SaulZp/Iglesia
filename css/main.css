@@ -174,7 +174,7 @@ div#bs-example-navbar-collapse-1 {
 }
 .navbar-brand{
     font-family: 'Pacifico', cursive;
-    font-size: 34px !important;
+    font-size: 1.5em !important;
     text-decoration: none;
     color: white !important;
 }
@@ -724,12 +724,7 @@ MEDIA QUERIES TABLET
     nav li{
         padding-right: -15px;
     }
-    .navbar-brand{
-        font-family: 'Pacifico', cursive;
-        font-size: 34px !important;
-        text-decoration: none;
-        color: white !important;
-    }
+  
     nav {
         position: fixed;
         display: block;

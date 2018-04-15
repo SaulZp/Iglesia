@@ -8,7 +8,7 @@ CREATE TABLE usuario(
 	nombre varchar(50) NOT NULL,
 	username varchar(15) NOT NULL,
 	correo varchar(30) NOT NULL,
-	password varchar(30) NOT NULL,
+	password varchar(50) NOT NULL,
 	direccion varchar(100) NOT NULL,
 	telefono varchar(10) NOT NULL
 );
@@ -45,5 +45,5 @@ CREATE TABLE proximosEventos (
 	fecha DATETIME NOT NULL,
 	imagen varchar(15) NULL
 );
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `username`, `correo`, `password`, `direccion`, `telefono`) VALUES
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `username`, `correo`, `password`, `direccion`, `telefono`) VALUES
 (1, 'saul', 'spz', 'dxlspzmau5@gmail.com', '827ccb0eea8a706c4c34a16891f84e', 'independencia sur', '-89');
