@@ -42,7 +42,7 @@
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
                 <div class="top-left-part">
-					<a href="principal.php">
+					<a href="index.php">
 						Comunidad Católica
 					</a>
 				</div>
@@ -50,7 +50,7 @@
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
                         <!-- plugins/images/salir.png -->
-                        <a href="salir.php" class="profile-pic"><img src="plugins/images/salir-blanco.png" alt="user-img" width="36" ><b class="hidden-xs">Cerrar sesión</b></a>
+                        <a href="salir.php" class="profile-pic"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i><b class="hidden-xs">Cerrar sesión</b></a>
                     </li>
                 </ul>
             </div>
@@ -63,26 +63,17 @@
             <div class="sidebar-nav navbar-collapse slimscrollsidebar">
                 <ul class="nav" id="side-menu">
                     <li style="padding: 10px 0 0;">
-                        <a href="principal.php" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">Inicio</span></a>
+                        <a href="index.php" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">Inicio</span></a>
                     </li>
                     
                     <li>
-                        <a href="cursos.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">Cursos</span></a>
+                        <a href="usuarios.php" class="waves-effect"><i class="fa fa-group fa-fw" aria-hidden="true"></i><span class="hide-menu">Usuarios</span></a>
                     </li>
                     <li>
-                        <a href="alumnos.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">Alumnos</span></a>
+                        <a href="reservaciones.php" class="waves-effect"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i><span class="hide-menu">Reservaciones</span></a>
                     </li>
                     <li>
-                        <a href="periodo.php" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">Periodo</span></a>
-                    </li>
-                    <li>
-                        <a href="calificaciones.php" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">Calificaciones</span></a>
-                    </li>
-                    <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
+                        <a href="eventos.php" class="waves-effect"><i class="fa fa-folder-open fa-fw" aria-hidden="true"></i><span class="hide-menu">Proximos eventos</span></a>
                     </li>
                 </ul>
                 
@@ -94,14 +85,54 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Inicio</h4> </div>
+                        <h4 class="page-title">Proximos eventos</h4> </div>
                     
                     <!-- /.col-lg-12 -->
                 </div>
                                 <!--row -->
-                
-                
-                
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php
+                        $link=mysqli_connect("localhost","root","");
+                        mysqli_select_db($link,"iglesia");
+                        $query = "SELECT *FROM proximosEventos";
+                        $result = mysqli_query($link,$query);
+                        if ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                            mysqli_data_seek($result, 0);
+                            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                                $nom = $row['nombreEvento'];
+                                $descripcion = $row['descripcion'];
+                                $fecha = $row['fecha'];
+                                if (isset($row['imagen'])) {
+                                    $imagen = $row['imagen'];
+                                    echo "Nombre del evento: $nom descripcion: $descripcion fecha: $fecha Imagen: <img src='img/$imagen' <br>";
+                                    ?>
+
+                                    <?php
+                                }else {
+                                    echo "Nombre del evento: $nom descripcion: $descripcion fecha: $fecha  <br>";
+                                }
+                                
+                                ?>
+                                
+                                <?php
+
+                            }
+                        }else{
+                            echo "Aun no se han agredo Proximos eventos";
+                        }
+                        ?>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <br>
+                        <form action="agregaEvento.php" method="POST">
+                            <input type="submit" name="agregar" value="Agregar nuevo evento">
+                        </form>
+                    </div>
+                    
+                </div>
             </div>
                     <!-- /.container-fluid -->
             <footer class="footer text-center"> 2017 &copy; Pixel Admin brought to you by wrappixel.com </footer>

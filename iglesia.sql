@@ -42,8 +42,10 @@ CREATE TABLE proximosEventos (
 	id_proximoEvento INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	nombreEvento varchar(15) NOT NULL,
 	descripcion text NOT NULL,
-	fecha DATETIME NOT NULL,
+	fecha DATE NOT NULL,
 	imagen varchar(15) NULL
 );
+
+
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `username`, `correo`, `password`, `direccion`, `telefono`) VALUES
 (1, 'saul', 'spz', 'dxlspzmau5@gmail.com', '827ccb0eea8a706c4c34a16891f84e', 'independencia sur', '-89');
