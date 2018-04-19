@@ -174,7 +174,7 @@ div#bs-example-navbar-collapse-1 {
 }
 .navbar-brand{
     font-family: 'Pacifico', cursive;
-    font-size: 1.5em !important;
+    font-size: 1em !important;
     text-decoration: none;
     color: white !important;
 }
@@ -188,7 +188,7 @@ nav {
 li{
     color: white !important;
     /*padding-left: 10px;*/
-    word-spacing: 5px !important;
+    word-spacing: 1px !important;
 }
 .dropdown-menu .sub-menu {
   left: 100%;
