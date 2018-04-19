@@ -91,7 +91,7 @@
                 </div>
                                 <!--row -->
                 <div class="row">
-                    <div class="col-md-12" style="background-color: black;">
+                    <div class="col-md-12" ">
                         <div class="table-responsive">
                             <?php
                         $link=mysqli_connect("localhost","root","");
@@ -116,6 +116,7 @@
                                 $nom = $row['nombreEvento'];
                                 $descripcion = $row['descripcion'];
                                 $fecha = $row['fecha'];
+                                $id_evento = $row['id_proximoEvento'];
                                 ?>
                                 <tr>
                                 <?php
@@ -126,8 +127,8 @@
                                         <td><?php echo "$descripcion"; ?></td>
                                         <td><?php echo "$fecha"; ?></td>
                                         <td><img src="img/<?php echo($imagen)?>" width="100" height="100"></td>
-                                        <td><a href="eventos.php?"<?php ?><i class="fa fa-time fa-fw" aria-hidden="true"></i>hola</a></td>
-                                        <td><?php ?></td>
+                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminiar</span></a></td>
+                                        <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
                                     <?php
                                 }else {
                                     ?>
@@ -135,7 +136,8 @@
                                         <td><?php echo "$descripcion"; ?></td>
                                         <td><?php echo "$fecha"; ?></td>
                                         <td></td>
-                                        <td></td>
+                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminiar</span></a></td>
+                                        <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
                                     <?php
                                 }
                                 
@@ -192,5 +194,7 @@
     <script src="js/dashboard1.js"></script>
     
 </body>
-
+<script type="text/javascript">
+    
+</script>
 </html>
