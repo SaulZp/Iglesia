@@ -19,8 +19,7 @@
 
     <body>
 
-        <!-- NAVBAR DE USUARIO-->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +39,7 @@
                             <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-     									<a class="dropdown-item" href="adoracionU.php">ADORACION AL SANTISMO</a>
+                                        <a class="dropdown-item" href="adoracionU.php">ADORACION AL SANTISMO</a>
                                         <a class="dropdown-item" href="bautismoU.php">SACRAMENTO DEL BAUTISMO</a>
                                         <a class="dropdown-item" href="matrimonioU.php">SACRAMENTO DEL MATRIMONIO</a>
                                         <a class="dropdown-item" href="velatorioU.php">VELATORIO</a>
@@ -60,6 +59,7 @@
                             <li><a class="color_animation" href="nosotrosU.php">NOSOTROS</a></li>
                             <li><a class="color_animation" href="contactoU.php">CONTACTO</a></li>
                             <li><a class="color_animation" href="reservacionesU.php">RESERVACIONES</a></li>
+                            <li><a class="color_animation" href="perfil.php">MI PERFIL</a></li>
                             <li><a class="color_animation" href="salir.php">SALIR</a></li>
                             
                         </ul>
