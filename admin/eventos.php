@@ -91,37 +91,68 @@
                 </div>
                                 <!--row -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <?php
+                    <div class="col-md-12" style="background-color: black;">
+                        <div class="table-responsive">
+                            <?php
                         $link=mysqli_connect("localhost","root","");
                         mysqli_select_db($link,"iglesia");
                         $query = "SELECT *FROM proximosEventos";
                         $result = mysqli_query($link,$query);
+
                         if ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
                             mysqli_data_seek($result, 0);
+                            ?>
+                            <table class="table">
+                            <tr>
+                                <th>Nombre del evento</th>
+                                <th>Descripción</th>
+                                <th>Fecha</th>
+                                <th>Imagen</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <?php
                             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
                                 $nom = $row['nombreEvento'];
                                 $descripcion = $row['descripcion'];
                                 $fecha = $row['fecha'];
+                                ?>
+                                <tr>
+                                <?php
                                 if (isset($row['imagen'])) {
                                     $imagen = $row['imagen'];
-                                    echo "Nombre del evento: $nom descripcion: $descripcion fecha: $fecha Imagen: <img src='img/$imagen' <br>";
                                     ?>
-
+                                        <td><?php echo "$nom"; ?></td>
+                                        <td><?php echo "$descripcion"; ?></td>
+                                        <td><?php echo "$fecha"; ?></td>
+                                        <td><img src="img/<?php echo($imagen)?>" width="100" height="100"></td>
+                                        <td><a href="eventos.php?"<?php ?><i class="fa fa-time fa-fw" aria-hidden="true"></i>hola</a></td>
+                                        <td><?php ?></td>
                                     <?php
                                 }else {
-                                    echo "Nombre del evento: $nom descripcion: $descripcion fecha: $fecha  <br>";
+                                    ?>
+                                        <td><?php echo "$nom"; ?></td>
+                                        <td><?php echo "$descripcion"; ?></td>
+                                        <td><?php echo "$fecha"; ?></td>
+                                        <td></td>
+                                        <td></td>
+                                    <?php
                                 }
                                 
                                 ?>
-                                
+                                </tr>
                                 <?php
 
+                                
                             }
+                            ?>
+                            </table>
+                            <?php
                         }else{
                             echo "Aun no se han agredo Proximos eventos";
                         }
                         ?>    
+                        </div>
                     </div>
                 </div>
                 <div class="row">

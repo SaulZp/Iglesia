@@ -41,10 +41,10 @@ CREATE TABLE reservaciones(
 DROP TABLE IF EXISTS proximosEventos;
 CREATE TABLE proximosEventos (
 	id_proximoEvento INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	nombreEvento varchar(15) NOT NULL,
+	nombreEvento varchar(30) NOT NULL,
 	descripcion text NOT NULL,
 	fecha DATE NOT NULL,
-	imagen varchar(15) NULL
+	imagen varchar(50) NULL
 );
 
 
