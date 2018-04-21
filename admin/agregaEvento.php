@@ -126,12 +126,12 @@
                                     $fecha = $_POST['fecha'];
                                     $link=mysqli_connect("localhost","root","");
                                     mysqli_select_db($link,"iglesia");
-                                    var_dump($_FILES);
+                                    
                                     $imagen = basename($_FILES["imagen"]["name"]);
-                                    var_dump($imagen);
+                                    
                                     if ($imagen == ''){
                                         $insert = "INSERT INTO proximosEventos (nombreEvento,descripcion,fecha) VALUES ('$nombre','$descripcion','$fecha')";
-                                        echo "$insert";
+                                        
                                         if (mysqli_query($link,$insert)) {
                                             echo "<br><h6 style='color: red;'>*Informacion agregada correctamente<h6>";
                                             unset($_FILES);
@@ -145,7 +145,7 @@
                                         $today = date('Y-m-d-H-i-u');
                                         $target_dir = "img/";
                                         $target_file = $target_dir . $today . basename($_FILES["imagen"]["name"]);
-                                        echo "$target_file";
+                                        
                                         $uploadOk = 1;
                                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                                         $imagen = $today . basename( $_FILES["imagen"]["name"]);

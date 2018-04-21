@@ -136,7 +136,7 @@
                                         <td><?php echo "$descripcion"; ?></td>
                                         <td><?php echo "$fecha"; ?></td>
                                         <td></td>
-                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminiar</span></a></td>
+                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
                                         <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
                                     <?php
                                 }

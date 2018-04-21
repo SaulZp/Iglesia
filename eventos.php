@@ -63,7 +63,7 @@
                             </li>
 
                             <li><a class="color_animation" href="horarios.html">HORARIOS</a></li>
-                            <li><a class="color_animation" href="eventos.html">PROXIMOS EVENTOS</a></li>
+                            <li><a class="color_animation" href="eventos.php">PROXIMOS EVENTOS</a></li>
                             <li><a class="color_animation" href="nosotros.html">NOSOTROS</a></li>
                             <li><a class="color_animation" href="contacto.php">CONTACTO</a></li>
                             
@@ -105,42 +105,52 @@
         </nav>
          
 
+        <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-12">
+              <div class="separacion"> 
+              <br><br>  
+            <?php
+            $link=mysqli_connect("localhost","root","");
+                        mysqli_select_db($link,"iglesia");
+                        $query = "SELECT *FROM proximosEventos";
+                        $result = mysqli_query($link,$query);
 
-       <!-- ============ Pricing  ============= -->
+                        if ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                            mysqli_data_seek($result, 0);
+                            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                              $nom = $row['nombreEvento'];
+                              $descripcion = $row['descripcion'];
+                              $imagen = $row['imagen'];
+                              $fecha = $row['fecha'];
+                              if (isset($imagen)) {
+                                ?>
+                              <h1><?php echo "$nom"; ?></h1>
+                              <h3><?php echo "$descripcion"; ?></h3>
+                              <h5>Fecha: <?php echo "$fecha"; ?></h5>
 
+                              <img src="<?php echo('admin/img/'.$imagen) ?>">
+                              <?php
+                              }else{
+                                ?>
+                              <h1><?php echo "$nom"; ?></h1>
+                              <p><?php echo "$descripcion"; ?></p>
+                              <p> <?php echo "$fecha"; ?> </p>
+                              <?php
+                              }
+                              
+                            }
+                        }else{
+                          ?>
+                          <h2>No hay eventos, visitanos pronto para ver los proximos eventos</h2>
+                          <?php
+                        }
 
-        <section id ="pricing" class="description_content">
-             <div class="domingo background_content">
-                <h1><span>DOMINGO DE RAMOS</span>
-                    <br/>
-                    MISA 10:30 AM
-                </h1>
-             </div>  
-        </section>
-
-
-        <!-- ============ Our Beer  ============= -->
-
-
-        <section id ="beer" class="description_content">
-            <div  class="jueves background_content">
-                <h1><span>JUEVES SANTO</span><br/> MISA 10:30 PM</h1>
-            </div>
-        </section>
-
-
-       <!-- ============ Our Bread  ============= -->
-
-
-        <section id="bread" class=" description_content">
-            <div  class="viernes background_content">
-                <h1> <span>VIERNES SANTO</span>
-                 <br>
-                 MISA 15:00 HRS
-             </h1>
-            </div>
-        </section>
-
+          ?>  
+              </div>
+          </div>
+         </div>
+        </div>
 
 
         <script type="text/javascript" src="js/jquery-1.10.2.min.js"> </script>
