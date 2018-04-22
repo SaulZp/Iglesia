@@ -142,8 +142,8 @@
                                         
                                         
                                         if (mysqli_query($link,$insert)) {
-                                            echo "<br><h6 style='color: red;'>*Informacion agregada correctamente<h6>";
-                                            unset($_FILES);
+                                           echo '<script>alert("Informacion agregada correctamente");</script>';
+                                                echo '<script>window.location="eventos.php";</script>';
                                         }else{
                                             echo "Error al agregar en proximos eventos";
                                         }
@@ -190,7 +190,8 @@
                                             
                                         
                                             if (mysqli_query($link,$insert)) {
-                                                echo "<br>Informacion agregada correctamente";
+                                                echo '<script>alert("Informacion agregada correctamente");</script>';
+                                                echo '<script>window.location="eventos.php";</script>';
                                             }
                                         }
                                     }

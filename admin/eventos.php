@@ -23,6 +23,20 @@
     <!-- color CSS -->
     
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+    $('a[data-confirm]').click(function(ev) {
+        var href = $(this).attr('href');
+        if (!$('#dataConfirmModal').length) {
+            $('body').append('<div id="dataConfirmModal" class="modal" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel">Please Confirm</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button><a class="btn btn-primary" id="dataConfirmOK">OK</a></div></div>');
+        } 
+        $('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
+        $('#dataConfirmOK').attr('href', href);
+        $('#dataConfirmModal').modal({show:true});
+        return false;
+    });
+});
+    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -127,7 +141,7 @@
                                         <td><?php echo "$descripcion"; ?></td>
                                         <td><?php echo "$fecha"; ?></td>
                                         <td><img src="img/<?php echo($imagen)?>" width="100" height="100"></td>
-                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminiar</span></a></td>
+                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect" onclick="return confirm('¿Esta seguro que desea eliminar?');"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
                                         <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
                                     <?php
                                 }else {
@@ -136,7 +150,7 @@
                                         <td><?php echo "$descripcion"; ?></td>
                                         <td><?php echo "$fecha"; ?></td>
                                         <td></td>
-                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
+                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect" onclick="return confirm('¿Esta seguro que desea eliminar?');"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
                                         <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
                                     <?php
                                 }
