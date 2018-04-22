@@ -41,7 +41,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">INICIO</a></li>
+                            <li><a class="navactive color_animation" href="indexU.php">INICIO</a></li>
                             <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -75,19 +75,57 @@
         </nav>
         <!-- END NAVBAR USUARIO -->
 
-        <div id="top" class="starter_container bg">
-            <div class="follow_container">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Comunidad Católica</h2>
-                    <h2 class="white second-title">" Entonces Jesús le dijo: —Yo soy la resurrección y la vida. El que cree en mí vivirá, aunque muera; y todo el que vive y cree en mí no morirá jamás.. 
-Juan 11:25-26 "</h2>
-                    <hr>
-                </div>
-            </div>
-        </div>
-
+        
+        <!-- ============ Sección de contacto  ============= -->
 
         
+        <section id="contact">
+            
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="separacion"></div>
+                        <h1>Contacto</h1>
+                        <p>Comunicate con nosotros</p>
+                        <div class="inner contact">
+                            <!-- Form Area -->
+                            <div class="contact-form">
+                                <!-- Form -->
+                                <form id="contact-us" method="post" action="contact.php">
+                                    <!-- Left Inputs -->
+                                    <div class="col-md-6 ">
+                                        <!-- Nombre -->
+                                        <input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre" />
+                                        <!-- Email -->
+                                        <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+                                        <!-- Asunto -->
+                                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Asunto" />
+                                    </div><!-- End Left Inputs -->
+                                    <!-- Right Inputs -->
+                                    <div class="col-md-6">
+                                        <!-- Message -->
+                                        <textarea name="message" id="message" class="form textarea"  placeholder="Mensaje"></textarea>
+                                    </div><!-- End Right Inputs -->
+                                    <!-- Bottom Submit -->
+                                    <div class="relative fullwidth col-xs-12">
+                                        <!-- Send Button -->
+                                        <button type="submit" id="submit" name="submit" class="form-btn">Enviar mensaje</button> 
+                                    </div><!-- End Bottom Submit -->
+                                    <!-- Clear -->
+                                    <div class="clear"></div>
+                                </form>
+                            </div><!-- End Contact Form Area -->
+                        </div><!-- End Inner -->
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCuuOJLTXbxJdDclN8WbN0ZKJexBW4oOgY&q=Parroquia de Nuestra Señora de Guadalupe" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+
         <!-- ============ Sección Pie de Página ============= -->
 
         <footer class="sub_footer">

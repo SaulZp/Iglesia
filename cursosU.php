@@ -24,6 +24,7 @@
     </head>
 
     <body>
+
         <!-- NAVBAR -->
          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -41,7 +42,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">INICIO</a></li>
+                            <li><a class="navactive color_animation" href="indexU.php">INICIO</a></li>
                             <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -74,20 +75,27 @@
             </div><!-- /.container-fluid -->
         </nav>
         <!-- END NAVBAR USUARIO -->
+        
+        <!-- ============ Featured Dish  ============= -->
 
-        <div id="top" class="starter_container bg">
-            <div class="follow_container">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Comunidad Católica</h2>
-                    <h2 class="white second-title">" Entonces Jesús le dijo: —Yo soy la resurrección y la vida. El que cree en mí vivirá, aunque muera; y todo el que vive y cree en mí no morirá jamás.. 
-Juan 11:25-26 "</h2>
-                    <hr>
-                </div>
+        <section id="cursos" class="description_content">
+            <div  class="cursos background_content">
+                <h1>CURSOS BIBLICOS</h1>
+
             </div>
-        </div>
+            <div class="text-content container"> 
+                <div class="col-md-6">
+                    
+                    <p class="desc-text">Los cursos bíblicos son de gran importancia para saber más de nuestra religión y dios. La biblia es y ha sido el libro de más importancia ya que ínsita a las personas que sigan un camino de bienestar con los demás y con uno mismo.
+</p>
+                </div>
+                
+            </div>
+        </section>
 
 
         
+
         <!-- ============ Sección Pie de Página ============= -->
 
         <footer class="sub_footer">

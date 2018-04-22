@@ -18,7 +18,7 @@
     </head>
 
     <body>
-
+        <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
@@ -30,22 +30,32 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Comunidad Católica</a>
+                           <a class="navbar-brand" href="index.html">Comunidad Católica</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">INICIO</a></li>
-                            <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
-                                <ul>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                            <li><a class="navactive color_animation" href="index.html">INICIO</a></li>
+                            <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a><ul>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="adoracion.html">ADORACION AL SANTISMO</a>
+                                        <a class="dropdown-item" href="bautismo.html">SACRAMENTO DEL BAUTISMO</a>
+                                        <a class="dropdown-item" href="matrimonio.html">SACRAMENTO DEL MATRIMONIO</a>
+                                        <a class="dropdown-item" href="velatorio.html">VELATORIO</a>
+                                        <a class="dropdown-item" href="pastoral.html">PASTORAL DE ENFERMOS</a>
+                                        
+                                        <a class="dropdown-item" href="confesiones.html">CONFESIONES</a>
+                                        <a class="dropdown-item" href="cursos.html">CURSOS BIBLICOS</a>
+                                        <a class="dropdown-item" href="quince.html">MISA DE XV A&Ntilde;OS</a>
+                                        <a class="dropdown-item" href="retiros.html">RETIROS VOCACIONALES</a>
+                                        <a class="dropdown-item" href="dispensarios.html">DISPENSARIOS</a>
+  </div>
+
+                                    
                                 </ul>
                             </li>
+
                             <li><a class="color_animation" href="horarios.html">HORARIOS</a></li>
                             <li><a class="color_animation" href="eventos.php">PROXIMOS EVENTOS</a></li>
                             <li><a class="color_animation" href="nosotros.html">NOSOTROS</a></li>
@@ -54,40 +64,40 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Entrar</b> <span class="caret"></span></a>
                                 <ul id="login-dp" class="dropdown-menu">
-                                    <li>
-                                        <div class="row">
+                                  <li>
+                                    <div class="row">
 
-                                            <div class="col-md-12">
-
-                                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                    <div class="form-group">
-                                                    <h3 class="white">Iniciar sesión</h3>
-                                                    <label class="sr-only" for="email">Correo electrónico</label>
-                                                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                    <label class="sr-only" for="password">Password</label>
-                                                    <input type="password" class="form-control" id="password" placeholder="Constraseña" required>
-                                                    <div class="help-block text-right"><a href="restablecer.php">¿Olvidaste tu contraseña?</a></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="bottom text-center">
-                                            <a href="registro.php"><b>Registrarse</b></a>
-                                        </div>
-                                        </div>
-                                    </li>
+                                      <div class="col-md-12">
+                                            <form class="form" role="form" method="post" action="validarLog.php" accept-charset="UTF-8" id="login-nav">
+                                              <div class="form-group">
+                                                <h3 class="white">Iniciar sesión</h3>
+                                                  <label class="sr-only" for="email">Correo electrónico</label>
+                                                  <input type="email" name="correo" class="form-control" id="email" placeholder="Correo electrónico" required>
+                                                </div>
+                                                <div class="form-group">
+                                                  <label class="sr-only" for="password">Password</label>
+                                                  <input type="password"  name="contra" class="form-control" id="password" placeholder="Constraseña" required>
+                                                  <div class="help-block text-right"><a href="restablecer.php">¿Olvidaste tu contraseña?</a></div>
+                                              </div>
+                                            <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                                                </div>
+                                            </form>
+                                         
+                                       </div>
+                                   <div class="bottom text-center">
+                                     <a href="registro.php"><b>Registrarse</b></a>
+                                   </div>
+                                  </div>
+                                   </li>
                                 </ul>
-                            </li>
+                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
             </div><!-- /.container-fluid -->
         </nav>
-         
+        <!-- END NAVBAR -->
         <!-- ============ Sección de contacto  ============= -->
 
         

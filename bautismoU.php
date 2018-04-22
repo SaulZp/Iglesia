@@ -24,7 +24,8 @@
     </head>
 
     <body>
-        <!-- NAVBAR -->
+
+          <!-- NAVBAR -->
          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
@@ -41,7 +42,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">INICIO</a></li>
+                            <li><a class="navactive color_animation" href="indexU.php">INICIO</a></li>
                             <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -74,20 +75,34 @@
             </div><!-- /.container-fluid -->
         </nav>
         <!-- END NAVBAR USUARIO -->
+         
+        
+        <!-- ============ Featured Dish  ============= -->
 
-        <div id="top" class="starter_container bg">
-            <div class="follow_container">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Comunidad Católica</h2>
-                    <h2 class="white second-title">" Entonces Jesús le dijo: —Yo soy la resurrección y la vida. El que cree en mí vivirá, aunque muera; y todo el que vive y cree en mí no morirá jamás.. 
-Juan 11:25-26 "</h2>
-                    <hr>
+        <section id="bautismo" class="description_content">
+            <div  class="bautismo background_content">
+                
+
+            </div>
+            <div class="text-content container"> 
+                <div class="col-md-6">
+                    <h1>SACRAMENTO DEL BAUTISMO</h1>
+                    <p class="desc-text">El Bautismo de un niño debe ser en lo posible, dentro de las primeras semanas de vida. Para ello se le sugiere  acercarse  a la Oficiana Parroquial para inscribir al niño con los mismos nombres y apellidos que se leen en los documentos civiles, esto debe hacerse a lo menos un mes antes de la fecha de celebración del sacramento. Para ello, se requiere el certificado de nacimiento o la libreta de familia y se  le invitará a los Encuentros de Catequesis Bautismal.
+
+Todo el que va a ser bautizado debe contar con, al menos, un padrino. Para ser padrino es necesario que haya sido elegido por los padres del niño o por quienes ocupen su lugar. Debe tener sobre los 16 años, ser católico, haya recibido la primera comunión y lleve una vida congruente con la fe y la misión que va a  asumir.  En caso de no estar confirmado, deberá coordinar  con el Párroco, lo mismo en el caso de que no cumple el requisito de la edad. No puede ser el padre o la madre de quien se va a bautizar. No puede, además estar afectado por una pena canónica legítimamente impuesta y declarada, lo que implica que no puede ser padrino o madrina una persona que se encuentre divorciada o conviviente. Los padrinos en caso de ser casados, deben serlo también por la Iglesia.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-section">
+                       <img src="images/bautizo1.jpg" width="250" height="220">
+                       <img src="images/bautizo2.jpg" width="250" height="220">
+                   </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
         
+
         <!-- ============ Sección Pie de Página ============= -->
 
         <footer class="sub_footer">

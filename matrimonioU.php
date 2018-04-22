@@ -1,3 +1,4 @@
+
 <?php
     session_start();
     if (!isset($_SESSION['id_us'])) {
@@ -24,6 +25,7 @@
     </head>
 
     <body>
+
         <!-- NAVBAR -->
          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -41,7 +43,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">INICIO</a></li>
+                            <li><a class="navactive color_animation" href="indexU.php">INICIO</a></li>
                             <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -74,20 +76,32 @@
             </div><!-- /.container-fluid -->
         </nav>
         <!-- END NAVBAR USUARIO -->
+        
+        <!-- ============ Featured Dish  ============= -->
 
-        <div id="top" class="starter_container bg">
-            <div class="follow_container">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Comunidad Católica</h2>
-                    <h2 class="white second-title">" Entonces Jesús le dijo: —Yo soy la resurrección y la vida. El que cree en mí vivirá, aunque muera; y todo el que vive y cree en mí no morirá jamás.. 
-Juan 11:25-26 "</h2>
-                    <hr>
-                </div>
+        <section id="matrimonio" class="description_content">
+            <div  class="matrimonio background_content">
+                <h1>SACRAMENTO DEL MATRIMONIO</h1>
+
             </div>
-        </div>
+            <div class="text-content container"> 
+                <div class="col-md-6">
+                    
+                    <p class="desc-text">El Matrimonio, como institución natural, es de origen divino. Dios creó a los hombres varón y hembra (Gen 1:27) y depositó en la misma naturaleza humana el instinto de procreación. Dios bendijo a la primera pareja humana y les dijo que se multiplicasen: “Procread y multiplicaos, y henchid la tierra” (Gen 1:28).
+
+A raíz del Pecado Original, la naturaleza humana quedó dañada y la concupiscencia se encargó de oscurecer los preceptos divinos y endurecer el corazón del hombre. Poco tiempo después vemos cómo los hombres fueron adquiriendo malas costumbres: poligamia, divorcio…
+
+El Pueblo Elegido, movido por los profetas, y principalmente después del Exilio Babilónico, fue redescubriendo la monogamia y la fidelidad matrimonial.
+
+Es Cristo quien devuelve la institución matrimonial a las propiedades que tenía en su origen (unidad e indisolubilidad); y además, lo eleva al grado de sacramento para los bautizados.</p>
+                </div>
+                
+            </div>
+        </section>
 
 
         
+
         <!-- ============ Sección Pie de Página ============= -->
 
         <footer class="sub_footer">

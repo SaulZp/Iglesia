@@ -24,6 +24,7 @@
     </head>
 
     <body>
+
         <!-- NAVBAR -->
          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -41,7 +42,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">INICIO</a></li>
+                            <li><a class="navactive color_animation" href="indexU.php">INICIO</a></li>
                             <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -74,20 +75,30 @@
             </div><!-- /.container-fluid -->
         </nav>
         <!-- END NAVBAR USUARIO -->
+        
+        <!-- ============ Featured Dish  ============= -->
 
-        <div id="top" class="starter_container bg">
-            <div class="follow_container">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Comunidad Católica</h2>
-                    <h2 class="white second-title">" Entonces Jesús le dijo: —Yo soy la resurrección y la vida. El que cree en mí vivirá, aunque muera; y todo el que vive y cree en mí no morirá jamás.. 
-Juan 11:25-26 "</h2>
-                    <hr>
-                </div>
+        <section id="featured" class="description_content">
+            <div  class="featured background_content">
+                <h1>Adoración al santismo</h1>
             </div>
-        </div>
+            <div class="text-content container"> 
+                <div class="col-md-6">
+                    <p class="desc-text">Adorar a Dios es reconocer con respeto y sumisión absolutos la nada de la criatura que solo existe por Dios. Es alabarlo, exaltarlo y humillarse a sí mismo como hace María en el magníficat confesando con gratitud que El ha hecho grandes cosas y que su nombre es Santo.
+
+Es el signo de nuestro amor al Señor, es una manera de tener la oportunidad de ver a Jesús Eucaristía, de ver la imagen que va a estar en vivo en presencia real en la casa de adoración perpetua.
+
+El fin de la adoración al santísimo es dejarnos moldear por El ya que nosotros somos nada ante su Presencia. El es el alfarero y nosotros la arcilla en sus benditas manos. Nos moldea a su imagen y semejanza hasta imprimir en nosotros su rostro como si nos miráramos en un espejo.
+
+Tenemos y debemos adorar al Señor porque Dios es Espíritu y los que lo adoran deben hacerlo en espíritu y verdad, (Juan 4,24). Jesús también necesita de nosotros ya que si no le abrimos el corazón  el no puede realizar su obra y no podemos colaborar para la Gloria de Dios.</p>
+                </div>
+                
+            </div>
+        </section>
 
 
         
+
         <!-- ============ Sección Pie de Página ============= -->
 
         <footer class="sub_footer">
