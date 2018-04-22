@@ -18,7 +18,8 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
 
-    <body><!-- NAVBAR -->
+    <body>
+
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
@@ -30,74 +31,53 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                           <a class="navbar-brand" href="index.html">Comunidad Católica</a>
+                        <a class="navbar-brand" href="#">Comunidad Católica</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
                             <li><a class="navactive color_animation" href="index.html">INICIO</a></li>
-                            <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a><ul>
+                            <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    SERVICIOS
+  </a>
+                                <ul>
+                                    
+  
+
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-     									<a class="dropdown-item" href="adoracion.html">ADORACION AL SANTISMO</a>
-                                        <a class="dropdown-item" href="bautismo.html">SACRAMENTO DEL BAUTISMO</a>
-                                        <a class="dropdown-item" href="matrimonio.html">SACRAMENTO DEL MATRIMONIO</a>
-                                        <a class="dropdown-item" href="velatorio.html">VELATORIO</a>
-                                        <a class="dropdown-item" href="pastoral.html">PASTORAL DE ENFERMOS</a>
+										<a class="dropdown-item" href="adoracionU.php">ADORACION AL SANTISMO</a>
+                                        <a class="dropdown-item" href="bautismoU.php">SACRAMENTO DEL BAUTISMO</a>
+                                        <a class="dropdown-item" href="matrimonioU.php">SACRAMENTO DEL MATRIMONIO</a>
+                                        <a class="dropdown-item" href="velatorioU.php">VELATORIO</a>
+                                        <a class="dropdown-item" href="pastoralU.php">PASTORAL DE ENFERMOS</a>
                                         
-                                        <a class="dropdown-item" href="confesiones.html">CONFESIONES</a>
-                                        <a class="dropdown-item" href="cursos.html">CURSOS BIBLICOS</a>
-                                        <a class="dropdown-item" href="quince.html">MISA DE XV A&Ntilde;OS</a>
-                                        <a class="dropdown-item" href="retiros.html">RETIROS VOCACIONALES</a>
-                                        <a class="dropdown-item" href="dispensarios.html">DISPENSARIOS</a>
+                                        <a class="dropdown-item" href="confesionesU.php">CONFESIONES</a>
+                                        <a class="dropdown-item" href="cursosU.php">CURSOS BIBLICOS</a>
+                                        <a class="dropdown-item" href="quinceU.php">MISA DE XV A&Ntilde;OS</a>
+                                        <a class="dropdown-item" href="retirosU.php">RETIROS VOCACIONALES</a>
+                                        <a class="dropdown-item" href="dispensariosU.php">DISPENSARIOS</a>
+
   </div>
 
                                     
                                 </ul>
                             </li>
 
-                            <li><a class="color_animation" href="horarios.html">HORARIOS</a></li>
+                            <li><a class="color_animation" href="horariosphpU.">HORARIOS</a></li>
                             <li><a class="color_animation" href="eventos.php">PROXIMOS EVENTOS</a></li>
-                            <li><a class="color_animation" href="nosotros.html">NOSOTROS</a></li>
+                            <li><a class="color_animation" href="nosotrosU.php">NOSOTROS</a></li>
                             <li><a class="color_animation" href="contacto.php">CONTACTO</a></li>
+							<li><a class="color_animation" href="perfil.php">MI PERFIL</a></li>
+                            <li><a class="color_animation" href="salir.php">SALIR</a></li>
                             
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Entrar</b> <span class="caret"></span></a>
-                                <ul id="login-dp" class="dropdown-menu">
-                                  <li>
-                                    <div class="row">
-
-                                      <div class="col-md-12">
-                                            <form class="form" role="form" method="post" action="validarLog.php" accept-charset="UTF-8" id="login-nav">
-                                              <div class="form-group">
-                                                <h3 class="white">Iniciar sesión</h3>
-                                                  <label class="sr-only" for="email">Correo electrónico</label>
-                                                  <input type="email" name="correo" class="form-control" id="email" placeholder="Correo electrónico" required>
-                                                </div>
-                                                <div class="form-group">
-                                                  <label class="sr-only" for="password">Password</label>
-                                                  <input type="password"  name="contra" class="form-control" id="password" placeholder="Constraseña" required>
-                                                  <div class="help-block text-right"><a href="restablecer.php">¿Olvidaste tu contraseña?</a></div>
-                                              </div>
-                                            <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
-                                                </div>
-                                            </form>
-                                         
-                                       </div>
-                                   <div class="bottom text-center">
-                                     <a href="registro.php"><b>Registrarse</b></a>
-                                   </div>
-                                  </div>
-                                   </li>
-                                </ul>
-                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
             </div><!-- /.container-fluid -->
         </nav>
-        <!-- END NAVBAR -->
+         
+        
 
 
 
@@ -192,7 +172,7 @@
 												<h2 class="dark-text">Relación de Canónigos y Sacerdotes de la Basílica de Guadalupe</h2><br>
 												<div class="col-lg-6 col-sm-6">
 												<div class="cardnosotros">
-													<img src="images/sacerdote1.jpg" width="310" height="300">
+													<img src="images/sacerdote1.jpg" width="310" height="300"/>
 													<h2>Emmo. Sr. Cardenal Carlos Aguiar Retes</h2>
 													<p class="title">• Custodio del Sagrado Original de Nuestra Señora de Guadalupe</p>
 													<div style="margin: 24px 0;"> 
@@ -205,7 +185,7 @@
 												
 												<div class="col-lg-6 col-sm-6">
 												<div class="cardnosotros">
-													<img src="images/sacerdote2.jpg" width="310" height="300">
+													<img src="images/sacerdote2.jpg" width="310" height="300"/>
 													<h2>Mons. Dr. Enrique Glennie Graue</h2>
 													<p class="title">•Rector de la Basílica de Santa María de Guadalupe</p>
 													<div style="margin: 24px 0;"> 
@@ -222,7 +202,7 @@
 												<h2 class="dark-text"><br><br>Canónigos Efectivos</h2><br>
 												<div class="col-lg-4 col-sm-4">
 												<div class="cardnosotros">
-													<img src="images/Canónigo1.jpg" width="310" height="300">
+													<img src="images/Canónigo1.jpg" width="310" height="300"/>
 													<h2>M. I. Sr. Canónigo Lic. Pedro Tapia Rosete</h2>
 													<p class="title">Vice-Rector</p>
 													<div style="margin: 24px 0;"> 
@@ -235,7 +215,7 @@
 												
 												<div class="col-lg-4 col-sm-4">
 												<div class="cardnosotros">
-													<img src="images/Canónigo2.jpg" width="310" height="300">
+													<img src="images/Canónigo2.jpg" width="310" height="300"/>
 													<h2>M. I. Sr. Canónigo Leonardo Tinoco Flores</h2>
 													<p class="title">Canónigo Penitenciario</p>
 													<div style="margin: 24px 0;"> 
@@ -247,7 +227,7 @@
 												</div>
 												<div class="col-lg-4 col-sm-4">
 												<div class="cardnosotros">
-													<img src="images/Canónigo4.jpg" width="310" height="300">
+													<img src="images/Canónigo4.jpg" width="310" height="300"/>
 													<h2>M. I. Sr. Canónigo Lic. Juan Castillo Hernández</h2>
 													<p class="title">Director de la Pastoral Profética</p>
 													<div style="margin: 24px 0;"> 
