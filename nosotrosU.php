@@ -20,7 +20,8 @@
 
     <body>
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <!-- NAVBAR -->
+         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,22 +32,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Comunidad Católica</a>
+                           <a class="navbar-brand" href="indexU.php">Comunidad Católica</a>
                     </div>
-
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="index.html">INICIO</a></li>
-                            <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    SERVICIOS
-  </a>
+                            <li><a class="navactive color_animation" href="indexU.php">INICIO</a></li>
+                            <li class="dropdown show"><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                                 <ul>
-                                    
-  
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-										<a class="dropdown-item" href="adoracionU.php">ADORACION AL SANTISMO</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="adoracionU.php">ADORACION AL SANTISMO</a>
                                         <a class="dropdown-item" href="bautismoU.php">SACRAMENTO DEL BAUTISMO</a>
                                         <a class="dropdown-item" href="matrimonioU.php">SACRAMENTO DEL MATRIMONIO</a>
                                         <a class="dropdown-item" href="velatorioU.php">VELATORIO</a>
@@ -57,18 +52,16 @@
                                         <a class="dropdown-item" href="quinceU.php">MISA DE XV A&Ntilde;OS</a>
                                         <a class="dropdown-item" href="retirosU.php">RETIROS VOCACIONALES</a>
                                         <a class="dropdown-item" href="dispensariosU.php">DISPENSARIOS</a>
-
-  </div>
-
-                                    
+                                    </div>
                                 </ul>
                             </li>
 
-                            <li><a class="color_animation" href="horariosphpU.">HORARIOS</a></li>
-                            <li><a class="color_animation" href="eventos.php">PROXIMOS EVENTOS</a></li>
+                            <li><a class="color_animation" href="horariosU.php">HORARIOS</a></li>
+                            <li><a class="color_animation" href="eventosU.php">PROXIMOS EVENTOS</a></li>
                             <li><a class="color_animation" href="nosotrosU.php">NOSOTROS</a></li>
-                            <li><a class="color_animation" href="contacto.php">CONTACTO</a></li>
-							<li><a class="color_animation" href="perfil.php">MI PERFIL</a></li>
+                            <li><a class="color_animation" href="contactoU.php">CONTACTO</a></li>
+                            <li><a class="color_animation" href="reservacionesU.php">RESERVACIONES</a></li>
+                            <li><a class="color_animation" href="perfil.php">MI PERFIL</a></li>
                             <li><a class="color_animation" href="salir.php">SALIR</a></li>
                             
                         </ul>
@@ -76,6 +69,7 @@
                 </div>
             </div><!-- /.container-fluid -->
         </nav>
+        <!-- END NAVBAR USUARIO -->
          
         
 
