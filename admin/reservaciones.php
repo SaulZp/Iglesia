@@ -43,6 +43,12 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+    <style type="text/css">
+        table#tb1{
+            width: 100%; 
+            background-color: #f1f1c1;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,91 +105,63 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Proximos eventos</h4> </div>
+                        <h4 class="page-title">RESERVACIONES</h4> </div>
                     
                     <!-- /.col-lg-12 -->
                 </div>
-                                <!--row -->
+
+                <!--row -->
                 <div class="row">
                     <div class="col-md-12" ">
                         <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th>TIPO EVENTO</th>
+                                    <th>FECHA</th>
+                                </tr>
+                            <!--CONEXION DE LA BASE DE DATOS-->
                             <?php
+
                         $link=mysqli_connect("localhost","root","");
                         mysqli_select_db($link,"iglesia");
-                        $query = "SELECT *FROM proximosEventos";
+                        $query = "SELECT *FROM reservaciones";
                         $result = mysqli_query($link,$query);
 
                         if ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
                             mysqli_data_seek($result, 0);
-                            ?>
-                            <table class="table">
-                            <tr>
-                                <th>Nombre del evento</th>
-                                <th>Descripción</th>
-                                <th>Fecha</th>
-                                <th>Imagen</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                            <?php
                             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-                                $nom = $row['nombreEvento'];
-                                $descripcion = $row['descripcion'];
+                                $id_reservacion = $row['id_reserva'];
+                                $id_evento = $row['id_evento'];
                                 $fecha = $row['fecha'];
-                                $id_evento = $row['id_proximoEvento'];
-                                ?>
-                                <tr>
-                                <?php
-                                if (isset($row['imagen'])) {
-                                    $imagen = $row['imagen'];
-                                    ?>
-                                        <td><?php echo "$nom"; ?></td>
-                                        <td><?php echo "$descripcion"; ?></td>
-                                        <td><?php echo "$fecha"; ?></td>
-                                        
-                                        <td><img src="img/<?php echo($imagen)?>" width="100" height="100"></td>
-                                        
-                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect" onclick="return confirm('¿Esta seguro que desea eliminar?');"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
-
-                                        <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
-                                    <?php
-                                }else {
-                                    ?>
-                                        <td><?php echo "$nom"; ?></td>
-                                        <td><?php echo "$descripcion"; ?></td>
-                                        <td><?php echo "$fecha"; ?></td>
-                                        <td></td>
-
-                                        <td><a href="eliminarProximoEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect" onclick="return confirm('¿Esta seguro que desea eliminar?');"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
-                                        
-                                        <td><a href="editarProximoxEvento.php?id_evento=<?php echo "$id_evento" ?>" class="waves-effect"><i class="fa fa-edit fa-fw" aria-hidden="true"></i><span class="hide-menu">Editar</span></a></td>
-                                    <?php
+                                if($id_evento == "2"){
+                                    $nombre_evento = "Bautizo";
+                                }else if($id_evento == "3"){
+                                    $nombre_evento = "Comunión";
+                                }else if($id_evento == "4"){
+                                    $nombre_evento = "Confirmación";
+                                }else if($id_evento == "5"){
+                                    $nombre_evento = "Matrimonio";
+                                }else if($id_evento == "5"){
+                                    $nombre_evento = "Velatorio";
                                 }
-                                
-                                ?>
-                                </tr>
-                                <?php
-
-                                
-                            }
                             ?>
-                            </table>
-                            <?php
+                                <tr>
+                                    <td><?php echo "$nombre_evento"; ?></td>
+                                    <td><?php echo "$fecha"; ?></td>
+                                    <td></td>
+
+                                        <td><a href="eliminarEvento.php?id_reservacion=<?php echo "$id_reservacion"?>" class="waves-effect" onclick="return confirm('¿Esta seguro que desea eliminar?');"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
+
+                                </tr>
+                        <?php 
+                            }
                         }else{
-                            echo "Aun no se han agredo Proximos eventos";
+                            echo "Aun no existen eventos reservados";
                         }
                         ?>    
+                        </table>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <br>
-                        <form action="agregaEvento.php" method="POST">
-                            <input type="submit" name="agregar" value="Agregar nuevo evento">
-                        </form>
-                    </div>
-                    
                 </div>
             </div>
                     <!-- /.container-fluid -->

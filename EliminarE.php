@@ -163,6 +163,7 @@ h1 {
 								if($row2=mysqli_fetch_array($result2)){
 									mysqli_query($link,"delete from reservaciones where (id_usuario='$usP') and (id_reserva='$idE2')");
 									echo "<h2 style='color:red;'>Evento eliminado</h2>";
+                                    echo '<script>window.location="EliminarE.php";</script>';
 									
 								}else{
 									echo "<h2 style='color:red;'>No existe ese evento en tu lista de eventos</h2>";
