@@ -70,38 +70,41 @@
             </div><!-- /.container-fluid -->
         </nav>
         <!-- END NAVBAR USUARIO -->
-        <hr>
-		<hr>
+
 		
-		<button class="tablink" onclick="openPage('Usuario', this, '#1b5e20')">Usuario</button>
-		<button class="tablink" onclick="openPage('Informacion', this, '#33691e')" id="defaultOpen">Informacion</button>
-		<button class="tablink" onclick="openPage('Eventos', this, '#2e7d32')">Eventos</button>
-		<button class="tablink" onclick="openPage('Calendario', this, '#558b2f')">Calendario</button>
-
-		<div id="Usuario" class="tabcontent">
-			<div class="container">
-				<img src="images/avatar.png" alt="Avatar" class="imageU">
-				<h3 style = "text-align:center;">Usuario</h3>
-			</div>
+		<div id="London" class="tabcontent">
+		<h3>USUARIO</h3>
+			<p>username</p>
 		</div>
 
-		<div id="Informacion" class="tabcontent">
-			<h3>Informacion</h3>
-			<p>Informacion del Usuario</p> 
+		<div id="Paris" class="tabcontent">
+		  <h3>INFORMACIÓN</h3>
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
+		  <p>Informacion del Usuario</p> 
 		</div>
 
-		<div id="Eventos" class="tabcontent">
-			<h3>Eventos</h3>
-			<p>Eventos del Usuario</p>
+		<div id="Tokyo" class="tabcontent">
+		  <h3>MIS EVENTOS</h3>
+		  <p>Eventos del usuario</p>
 		</div>
 
-		<div id="Calendario" class="tabcontent">
-			<h3>Calendario</h3>
-			<p>Calendario para guia</p>
-		</div>
+		<button class="tablink" onclick="openCity('London', this, '#9BE86F')" id="defaultOpen">Usuario</button>
+		<button class="tablink" onclick="openCity('Paris', this, '#9BE86F')">Información</button>
+		<button class="tablink" onclick="openCity('Tokyo', this, '#9BE86F')">Mis Eventos</button>
 
 		<script>
-		function openPage(pageName,elmnt,color) {
+		function openCity(cityName,elmnt,color) {
 			var i, tabcontent, tablinks;
 			tabcontent = document.getElementsByClassName("tabcontent");
 			for (i = 0; i < tabcontent.length; i++) {
@@ -111,17 +114,13 @@
 			for (i = 0; i < tablinks.length; i++) {
 				tablinks[i].style.backgroundColor = "";
 			}
-			document.getElementById(pageName).style.display = "block";
+			document.getElementById(cityName).style.display = "block";
 			elmnt.style.backgroundColor = color;
 
 		}
 		// Get the element with id="defaultOpen" and click on it
 		document.getElementById("defaultOpen").click();
 		</script>
-        
-
-
-
   
 
 

@@ -51,46 +51,7 @@ button:hover, #twitter:hover {
     padding: 10px;
 }
 
-/*Colores Perfil*/
 
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-    height: 91%;
-    margin: 0;
-    font-family: Arial;
-}
-
-/* Style tab links */
-.tablink {
-    background-color: #555;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-}
-
-.tablink:hover {
-    background-color: #1b1b1b;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-    color: white;
-    display: none;
-    padding: 100px 20px;
-    height: 100%;
-}
-
-#Usuario {background-color: #1b5e20;}
-#Informacion {background-color: #33691e;}
-#Eventos {background-color: #2e7d32;}
-#Calendario {background-color: #558b2f;}
 
 /* Imagen de Usuario */
 .containerU {
@@ -125,3 +86,36 @@ body, html {
 .containerU:hover .overlayU {
   opacity: 1;
 }
+
+/*Estilo de Tabla*/
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.333333%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 50px;
+    text-align: center;
+	height: 86.5%;
+}
+
+#London {background-color:##FFFFFF;}
+#Paris {background-color:##FFFFFF;}
+#Tokyo {background-color:##FFFFFF;}
+#Oslo {background-color:##FFFFFF;}
