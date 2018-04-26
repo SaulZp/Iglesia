@@ -44,9 +44,16 @@
 				$solicitud = "INSERT INTO usuario (nombre,username,correo,password,direccion,telefono) VALUES('$nombre','$usuario','$correo','$cifradoPassword','$direccion',$telefono)";
 				$conexion->query($solicitud);
 				///VARIABLE PARA QUE INICIE SESION
-				$_SESSION["username"] = $usuario;
-				echo '<script>alert("El usuario se agrego con exito");</script>';
+				
+				$solictud = "SELECT * FROM usuario WHERE username = '$usuario'";
+				$resultado = $conexion->query($solictud);
+				
+				$row=mysqli_fetch_array($resultado);
+				$_SESSION['username']=$row['username'];
+				$_SESSION['id_us']=$row['id_usuario'];
+				echo '<script>alert("Se registro exitosamente");</script>';
 				echo '<script>window.location="indexU.php";</script>';
+				
 			}else{
 				echo '<script>alert("Correo registrado, intente con otro");</script>';
 				echo '<script>window.location="registro.php";</script>';
