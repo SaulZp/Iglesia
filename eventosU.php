@@ -90,30 +90,50 @@
                         if ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
                             mysqli_data_seek($result, 0);
                             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                              ?>
+        <div class="container-fluid" style="margin: 3em; border: 1px solid #000000; border-radius: 10px;">
+         <div class="row">
+            <div class="col-md-12" style="padding: 1em;">
+              
+                              <?php
                               $nom = $row['nombreEvento'];
                               $descripcion = $row['descripcion'];
                               $imagen = $row['imagen'];
                               $fecha = $row['fecha'];
                               if (isset($imagen)) {
                                 ?>
-                              <h1><?php echo "$nom"; ?></h1>
+                              <h1 class="text-center" style="padding-bottom: 1px;"><?php echo "$nom"; ?></h1>
                               <h3><?php echo "$descripcion"; ?></h3>
-                              <h5>Fecha: <?php echo "$fecha"; ?></h5>
+                              <h5>Fecha: <?php echo "Fecha: $fecha"; ?></h5>
 
                               <img src="<?php echo('admin/img/'.$imagen) ?>">
                               <?php
                               }else{
                                 ?>
-                              <h1><?php echo "$nom"; ?></h1>
+                              <h1 class="text-center"><?php echo "$nom"; ?></h1>
                               <p><?php echo "$descripcion"; ?></p>
-                              <p> <?php echo "$fecha"; ?> </p>
+                              <p> <?php echo "Fecha: $fecha"; ?> </p>
                               <?php
                               }
                               
+                              ?>
+                            
+                          </div>
+                        </div>
+                      </div>
+                              <?php
                             }
                         }else{
                           ?>
-                          <h2>No hay eventos, visitanos pronto para ver los proximos eventos</h2>
+                          <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-12">
+              <div class="separacion">
+                          <h2 class="text-center">No hay eventos, visitanos pronto para ver los proximos eventos</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                           <?php
                         }
 
