@@ -93,6 +93,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="separacion"></div>
+                        <br><br>
                         <h1>Registrate</h1>
                         <p></p>
                         <div class="inner contact">
