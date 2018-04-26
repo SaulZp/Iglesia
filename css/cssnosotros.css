@@ -1,0 +1,127 @@
+.cardnosotros {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+#face {
+  text-decoration: none;
+  font-size: 22px;
+  color: #3b5999;
+}
+
+#twitter {
+  text-decoration: none;
+  font-size: 22px;
+  color: #55acee;
+}
+
+button:hover, #face:hover {
+  opacity: 0.7;
+}
+button:hover, #twitter:hover {
+  opacity: 0.7;
+}
+
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+/*Colores Perfil*/
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 91%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #1b1b1b;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Usuario {background-color: #1b5e20;}
+#Informacion {background-color: #33691e;}
+#Eventos {background-color: #2e7d32;}
+#Calendario {background-color: #558b2f;}
+
+/* Imagen de Usuario */
+.containerU {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.imageU {
+  display: block;
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overlayU {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.containerU:hover .overlayU {
+  opacity: 1;
+}
