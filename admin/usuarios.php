@@ -117,54 +117,32 @@
                             <table class="table">
                                 <tr>
                                     <th>NOMBRE DEL USUARIO</th>
-                                    <th>TIPO DE EVENTO</th>
-                                    <th>FECHA RESERVADA</th>
                                     <th>E-MAIL</th>
+                                    <th>DIRECCION</th>
+                                    <th>TELEFONO</th>
                                 </tr>
                             <!--CONEXION DE LA BASE DE DATOS-->
                             <?php
 
                         $link=mysqli_connect("localhost","root","");
                         mysqli_select_db($link,"iglesia");
-                        $query = "SELECT *FROM reservaciones";
+                        $query = "SELECT *FROM usuario";
                         $result = mysqli_query($link,$query);
 
                         if ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
                             mysqli_data_seek($result, 0);
                             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-                                $id_reservacion = $row['id_reserva'];
-                                $id_usuario = $row['id_usuario'];
-                                $id_evento = $row['id_evento'];
-                                $fecha = $row['fecha'];
-                                if($id_evento == "2"){
-                                    $nombre_evento = "Bautizo";
-                                }else if($id_evento == "3"){
-                                    $nombre_evento = "Comunión";
-                                }else if($id_evento == "4"){
-                                    $nombre_evento = "Confirmación";
-                                }else if($id_evento == "5"){
-                                    $nombre_evento = "Matrimonio";
-                                }else if($id_evento == "5"){
-                                    $nombre_evento = "Velatorio";
-                                }
-
-                                //CONSULTA EL NOMBRE DEL USUARIO CON RESPECTO AL ID DE USUARIO DE LAS RESERVACIONES
-                                $consulta = "SELECT * FROM usuario WHERE id_usuario ='$id_usuario'";
-                                $result2 = mysqli_query($link,$consulta);
-                                if($row2 = mysqli_fetch_array($result2,MYSQLI_ASSOC)){
-                                    $nombre_usuario = $row2['nombre'];
-                                    $email = $row2['correo'];                                    
-                                }
+                                $nombre = $row['nombre'];
+                                $email = $row['correo'];
+                                $direccion = $row['direccion'];
+                                $tel = $row['telefono'];
                             ?>
                                 <tr>
-                                    <td><?php echo"$nombre_usuario"; ?></td>
-                                    <td><?php echo "$nombre_evento"; ?></td>
-                                    <td><?php echo "$fecha"; ?></td>
-                                    <td><?php echo"$email"; ?></td>
+                                    <td><?php echo "$nombre"; ?></td>
+                                    <td><?php echo "$email"; ?></td>
+                                    <td><?php echo "$direccion"; ?></td>
+                                    <td><?php echo "$tel"; ?></td>
                                     <td></td>
-
-                                        <td><a href="eliminarEvento.php?id_reservacion=<?php echo "$id_reservacion"?>" class="waves-effect" onclick="return confirm('¿Esta seguro que desea eliminar?');"><i class="fa fa-times fa-fw" aria-hidden="true"></i><span class="hide-menu">Eliminar</span></a></td>
-
                                 </tr>
                         <?php 
                             }
