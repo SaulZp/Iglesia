@@ -19,7 +19,7 @@
     </head>
 
     <body>
-
+		<?PHP session_start(); ?>
         <!-- NAVBAR -->
          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -72,34 +72,82 @@
         <!-- END NAVBAR USUARIO -->
         <hr>
 		<hr>
-		
-		<button class="tablink" onclick="openPage('Usuario', this, '#1b5e20')">Usuario</button>
-		<button class="tablink" onclick="openPage('Informacion', this, '#33691e')" id="defaultOpen">Informacion</button>
-		<button class="tablink" onclick="openPage('Eventos', this, '#2e7d32')">Eventos</button>
-		<button class="tablink" onclick="openPage('Calendario', this, '#558b2f')">Calendario</button>
 
 		<div id="Usuario" class="tabcontent">
 			<div class="container">
-				<img src="images/avatar.png" alt="Avatar" class="imageU">
-				<h3 style = "text-align:center;">Usuario</h3>
+				<center>
+				<img src="images/avatar.png" alt="Avatar" style="width:150px">
+				</center>
+				<?php	
+					$nom=$_SESSION['id_us'];
+						
+					$link=mysqli_connect("localhost","root","");
+					mysqli_select_db($link,"iglesia");
+					$result=mysqli_query($link,"select nombre,username,correo,direccion,telefono from usuario where id_usuario='$nom'");
+					
+					$row=mysqli_fetch_array($result);
+					mysqli_data_seek($result,0);
+					
+					
+					
+					$nomb=$row['nombre'];
+					$user=$row['username'];
+					$correo=$row['correo'];
+					$dir=$row['direccion'];
+					$tel=$row['telefono'];
+                    
+					echo "<h3 align=\"center\">Nombre: $nomb</h3>";
+					echo "<h3 align=\"center\">Usuario: $user</h3>";
+					echo "<h3 align=\"center\">Correo: $correo</h3>";
+					echo "<h3 align=\"center\">Direccion: $dir</h3>";
+					echo "<h3 align=\"center\">Telefono: $tel</h3>";
+					
+					
+					
+				?>	
 			</div>
 		</div>
 
 		<div id="Informacion" class="tabcontent">
-			<h3>Informacion</h3>
-			<p>Informacion del Usuario</p> 
+			<h3 align="center">Mis Eventos</h3>
+			<?php
+				$nom=$_SESSION['id_us'];
+						
+				$link=mysqli_connect("localhost","root","");
+				mysqli_select_db($link,"iglesia");
+				$result=mysqli_query($link,"select id_reserva,id_evento,fecha from reservaciones where id_usuario='$nom'");
+				echo "<TABLE BORDER=1 style='margin: 0 auto;'><TR><TD><B>    ID Reservacion    </B></TD><TD><B>    ID Evento    </B></TD><TD><B>    Nombre de Evento    </B></TD><TD><B>    Fecha    </B></TD></TR>";
+				if($row=mysqli_fetch_array($result)){
+					mysqli_data_seek($result,0);
+					$cont=0;
+					while($row=mysqli_fetch_array($result)){
+								
+						$idE=$row['id_evento'];
+						$res=$row['id_reserva'];
+						$fecha=$row['fecha'];
+						$result2=mysqli_query($link,"select nombreEvento from evento where id_evento='$idE'");
+						while($row2=mysqli_fetch_array($result2)){
+							$no=$row2['nombreEvento'];
+							echo "<tr><td>    $res    </td><td>    $idE    </td><td>    $no    </td><td>    $fecha    </td></tr><br>";
+							$cont++;
+							break;
+						}
+								
+					}
+					echo"</table>";
+					}else{
+						echo "Usted no tiene evento todavia";
+					}
+						
+			?> 
 		</div>
 
 		<div id="Eventos" class="tabcontent">
 			<h3>Eventos</h3>
 			<p>Eventos del Usuario</p>
 		</div>
-
-		<div id="Calendario" class="tabcontent">
-			<h3>Calendario</h3>
-			<p>Calendario para guia</p>
-		</div>
-
+		<button class="tablink" onclick="openPage('Usuario', this, '#1b5e20')" id="defaultOpen">Usuario</button>
+		<button class="tablink" onclick="openPage('Informacion', this, '#33691e')">Informacion</button>
 		<script>
 		function openPage(pageName,elmnt,color) {
 			var i, tabcontent, tablinks;
