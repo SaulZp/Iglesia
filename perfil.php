@@ -144,10 +144,9 @@
 
 		<div id="Eventos" class="tabcontent">
 			<h3>Eventos</h3>
-			<p>Eventos del Usuario</p>
 		</div>
-		<button class="tablink" onclick="openPage('Usuario', this, '#1b5e20')" id="defaultOpen">Usuario</button>
-		<button class="tablink" onclick="openPage('Informacion', this, '#33691e')">Informacion</button>
+		<button class="tablink" onclick="openPage('Usuario', this, '#1b5e20')" id="defaultOpen">USUARIO</button>
+		<button class="tablink" onclick="openPage('Informacion', this, '#33691e')">MIS EVENTOS</button>
 		<script>
 		function openPage(pageName,elmnt,color) {
 			var i, tabcontent, tablinks;
